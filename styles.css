@@ -1,0 +1,165 @@
+:root {
+    --back1:  #000;
+    --back2:   #121212;
+
+    --font1: white;
+    --font2: rgba(255, 255, 255, 0.75);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+    color: var(--font1);
+    background-color: var(--back1);
+}
+
+a {
+    color: var(--font1);
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 3.3em;
+    font-weight: 333;
+    text-transform: capitalize;
+}
+
+input {
+    background-color: #00000000;
+    outline: none;
+    border: none;
+    color: var(--font2);
+    font-size: 1.5em;
+    text-transform: capitalize;
+}
+
+input:last-child{
+    border: var(--font2) 1px solid;
+    border-radius: 5px;
+    padding: 2px 10px 2px 10px;
+}
+
+input::placeholder{
+    color: var(--font2);
+}
+
+input:active{
+    color: var(--font2);
+}
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2vh;
+    padding: 20px;
+    border-bottom: #ffffff93 1px solid;
+    background-color: var(--back1);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-img{
+    height: 20px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-right: 50px;
+    text-transform: uppercase;
+}
+
+header a {
+    font-size: 1.3em;
+    font-weight: 300;
+}
+
+.back1 {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background-color: var(--back1);
+    text-align: center;
+}
+
+.back2 {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background-color: var(--back2);
+}
+
+.back3 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 150px;
+    background-color: var(--back1);
+}
+
+.product {
+    margin: 30px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.product h3 {
+    font-size: 2em;
+    font-weight: 300;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.product button {
+    background-color: var(--back2);
+    color: var(--font1);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 300px;
+    padding: 10px 50px 10px 50px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    header ul {
+        margin-right: 0;
+        gap: 20px;
+    }
+    
+    .back3 {
+        flex-direction: column;
+        padding: 50px;
+    }
+
+    .product {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
